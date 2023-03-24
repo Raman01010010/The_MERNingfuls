@@ -1,5 +1,6 @@
 import React from 'react'
 import "../App.css"
+import { addUser } from '../services/api'
 export default function Signup() {
   const [user,setUser]=React.useState({})
   function handleChange(event){
@@ -13,11 +14,19 @@ export default function Signup() {
       )
     })
     console.log(user)
+   
 
   }
-  function handleSubmit(event){
+  async function handleSubmit(event){
     event.preventDefault()
     console.log("submit")
+   const user1={
+      ...user,
+      "picture":"NA",
+      "name":`${user.given_name} ${user.family_name}`
+    }
+    const code=await addUser(user1)
+    console.log(code)
   }
   return (
     <div> 
@@ -45,7 +54,7 @@ export default function Signup() {
     <input onChange={handleChange}
       type="password"
       placeholder="Enter Password"
-      name="psw"
+      name="token"
       required=""
     />
     
