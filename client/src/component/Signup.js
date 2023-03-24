@@ -25,7 +25,8 @@ export default function Signup() {
       "picture":"NA",
       "name":`${user.given_name} ${user.family_name}`
     }
-    await addUser(user1)
+    const code=await addUser(user1)
+    console.log(code)
   }
   return (
     <div> 
