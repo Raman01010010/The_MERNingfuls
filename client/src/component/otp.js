@@ -17,48 +17,18 @@ export default function otp() {
         {" "}
         <span>A code has been sent to</span> <small>*******9897</small>{" "}
       </div>{" "}
-      <div
-        id="otp"
-        className="inputs d-flex flex-row justify-content-center mt-2"
-      >
+
+      
         {" "}
         <input
           className="m-2 text-center form-control rounded"
           type="text"
           id="first"
-          maxLength={1}
-        />{" "}
-        <input
-          className="m-2 text-center form-control rounded"
-          type="text"
-          id="second"
-          maxLength={1}
-        />{" "}
-        <input
-          className="m-2 text-center form-control rounded"
-          type="text"
-          id="third"
-          maxLength={1}
-        />{" "}
-        <input
-          className="m-2 text-center form-control rounded"
-          type="text"
-          id="fourth"
-          maxLength={1}
-        />{" "}
-        <input
-          className="m-2 text-center form-control rounded"
-          type="text"
-          id="fifth"
-          maxLength={1}
-        />{" "}
-        <input
-          className="m-2 text-center form-control rounded"
-          type="text"
-          id="sixth"
-          maxLength={1}
-        />{" "}
-      </div>{" "}
+          maxLength={6}
+        />
+
+
+      {" "}
       <div className="mt-4">
         {" "}
         <button className="btn btn-danger px-4 validate">Validate</button>{" "}
