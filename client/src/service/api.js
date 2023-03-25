@@ -11,6 +11,15 @@ export const addUser=async (data)=>{
         return error
     }
 }
+export const addResponse=async (data)=>{
+    try{
+        return await axios.post(`${URL}/response`,data)
+
+    }catch(error){
+        console.log("Error add",error.response.data)
+        return error
+    }
+}
 
 
 export const addUser3=async (data)=>{

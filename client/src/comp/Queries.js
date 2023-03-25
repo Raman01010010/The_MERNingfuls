@@ -6,19 +6,12 @@ import FormControl from '@mui/material/FormControl';
 import FormLabel from '@mui/material/FormLabel';
 
 import React from 'react'
-import {posts} from "../service/api"
-import {getPosts} from "../service/api"
-import Load from './Load';
-import Post from './Post'
-import Commnet from './Comment'
-import { addLike } from '../service/api';
-import { isLiked } from '../service/api';
-import { searchPost } from '../service/api';
+import { addResponse } from '../service/api';
 
 import ReactDOM from 'react-dom/client';
 export default function Queries(props){
 
-  const [quiz,setQuiz]=React.useState({})
+  const [quiz,setQuiz]=React.useState({"a":"","b":"","c":"","d":"","e":"","f":"","g":"","h":"","i":"","j":""})
   function handleChange(event){
     console.log(event.target.value)
    setQuiz(old=>{
@@ -36,7 +29,10 @@ console.log(quiz)
   }
 
 
+async function handleClick(){
+    await addResponse(quiz)
 
+}
 
 
 const [ls,setLs]=React.useState(true)
@@ -55,10 +51,10 @@ function load(){
        
         name="radio-buttons-group"
       >
-        <FormControlLabel onChange={handleChange} name="0" value="NOT AT ALL" control={<Radio />} label="NOT AT ALL" />
-        <FormControlLabel onChange={handleChange} name="0" value="SEVERAL DAYS" control={<Radio />} label="SEVERAL DAYS" />
-        <FormControlLabel onChange={handleChange} name="0" value="MORE THAN HALF DAYS" control={<Radio />} label="MORE THAN HALF DAYS" />
-        <FormControlLabel onChange={handleChange} name="0" value="NEARLY EVERYDAY" control={<Radio />} label="MNEARLY EVERYDAY" />
+        <FormControlLabel onChange={handleChange} name="a" value="NOT AT ALL" control={<Radio />} label="NOT AT ALL" />
+        <FormControlLabel onChange={handleChange} name="a" value="SEVERAL DAYS" control={<Radio />} label="SEVERAL DAYS" />
+        <FormControlLabel onChange={handleChange} name="a" value="MORE THAN HALF DAYS" control={<Radio />} label="MORE THAN HALF DAYS" />
+        <FormControlLabel onChange={handleChange} name="a" value="NEARLY EVERYDAY" control={<Radio />} label="MNEARLY EVERYDAY" />
       </RadioGroup>
     </FormControl><br/>
     <FormControl>
@@ -68,10 +64,10 @@ function load(){
         
         name="radio-buttons-group"
       >
-        <FormControlLabel onChange={handleChange} name="1" value="NOT AT ALL" control={<Radio />} label="NOT AT ALL" />
-        <FormControlLabel onChange={handleChange} name="1" value="SEVERAL DAYS" control={<Radio />} label="SEVERAL DAYS" />
-        <FormControlLabel onChange={handleChange} name="1" value="MORE THAN HALF DAYS" control={<Radio />} label="MORE THAN HALF DAYS" />
-        <FormControlLabel onChange={handleChange} name="1" value="NEARLY EVERYDAY" control={<Radio />} label="NEARLY EVERYDAY" />
+        <FormControlLabel onChange={handleChange} name="b" value="NOT AT ALL" control={<Radio />} label="NOT AT ALL" />
+        <FormControlLabel onChange={handleChange} name="b" value="SEVERAL DAYS" control={<Radio />} label="SEVERAL DAYS" />
+        <FormControlLabel onChange={handleChange} name="b" value="MORE THAN HALF DAYS" control={<Radio />} label="MORE THAN HALF DAYS" />
+        <FormControlLabel onChange={handleChange} name="b" value="NEARLY EVERYDAY" control={<Radio />} label="NEARLY EVERYDAY" />
       </RadioGroup>
     </FormControl><br/>
     <FormControl>
@@ -81,10 +77,10 @@ function load(){
         
         name="radio-buttons-group"
       >
-        <FormControlLabel onChange={handleChange} name="2" value="NOT AT ALL" control={<Radio />} label="NOT AT ALL" />
-        <FormControlLabel onChange={handleChange} name="2" value="SEVERAL DAYS" control={<Radio />} label="SEVERAL DAYS" />
-        <FormControlLabel onChange={handleChange} name="2" value="MORE THAN HALF DAYS" control={<Radio />} label="MORE THAN HALF DAYS" />
-        <FormControlLabel onChange={handleChange} name="2" value="NEARLY EVERYDAY" control={<Radio />} label="NEARLY EVERYDAY" />
+        <FormControlLabel onChange={handleChange} name="c" value="NOT AT ALL" control={<Radio />} label="NOT AT ALL" />
+        <FormControlLabel onChange={handleChange} name="c" value="SEVERAL DAYS" control={<Radio />} label="SEVERAL DAYS" />
+        <FormControlLabel onChange={handleChange} name="c" value="MORE THAN HALF DAYS" control={<Radio />} label="MORE THAN HALF DAYS" />
+        <FormControlLabel onChange={handleChange} name="c" value="NEARLY EVERYDAY" control={<Radio />} label="NEARLY EVERYDAY" />
       </RadioGroup>
     </FormControl><br/>
     <FormControl>
@@ -94,10 +90,10 @@ function load(){
         
         name="radio-buttons-group"
       >
-        <FormControlLabel onChange={handleChange} name="3" value="NOT AT ALL" control={<Radio />} label="NOT AT ALL" />
-        <FormControlLabel onChange={handleChange} name="3" value="SEVERAL DAYS" control={<Radio />} label="SEVERAL DAYS" />
-        <FormControlLabel onChange={handleChange} name="3" value="MORE THAN HALF DAYS" control={<Radio />} label="MORE THAN HALF DAYS" />
-        <FormControlLabel onChange={handleChange} name="3" value="NEARLY EVERYDAY" control={<Radio />} label="NEARLY EVERYDAY" />
+        <FormControlLabel onChange={handleChange} name="d" value="NOT AT ALL" control={<Radio />} label="NOT AT ALL" />
+        <FormControlLabel onChange={handleChange} name="d" value="SEVERAL DAYS" control={<Radio />} label="SEVERAL DAYS" />
+        <FormControlLabel onChange={handleChange} name="d" value="MORE THAN HALF DAYS" control={<Radio />} label="MORE THAN HALF DAYS" />
+        <FormControlLabel onChange={handleChange} name="d" value="NEARLY EVERYDAY" control={<Radio />} label="NEARLY EVERYDAY" />
       </RadioGroup>
     </FormControl><br/>
     <FormControl>
@@ -107,10 +103,10 @@ function load(){
         
         name="radio-buttons-group"
       >
-        <FormControlLabel onChange={handleChange} name="4" value="NOT AT ALL" control={<Radio />} label="NOT AT ALL" />
-        <FormControlLabel onChange={handleChange} name="4" value="SEVERAL DAYS" control={<Radio />} label="SEVERAL DAYS" />
-        <FormControlLabel onChange={handleChange} name="4" value="MORE THAN HALF DAYS" control={<Radio />} label="MORE THAN HALF DAYS" />
-        <FormControlLabel onChange={handleChange} name="4" value="NEARLY EVERYDAY" control={<Radio />} label="NEARLY EVERYDAY" />
+        <FormControlLabel onChange={handleChange} name="e" value="NOT AT ALL" control={<Radio />} label="NOT AT ALL" />
+        <FormControlLabel onChange={handleChange} name="e" value="SEVERAL DAYS" control={<Radio />} label="SEVERAL DAYS" />
+        <FormControlLabel onChange={handleChange} name="e" value="MORE THAN HALF DAYS" control={<Radio />} label="MORE THAN HALF DAYS" />
+        <FormControlLabel onChange={handleChange} name="e" value="NEARLY EVERYDAY" control={<Radio />} label="NEARLY EVERYDAY" />
       </RadioGroup>
     </FormControl><br/>
     <FormControl>
@@ -120,10 +116,10 @@ function load(){
         
         name="radio-buttons-group"
       >
-        <FormControlLabel onChange={handleChange} name="5" value="NOT AT ALL" control={<Radio />} label="NOT AT ALL" />
-        <FormControlLabel onChange={handleChange} name="5" value="SEVERAL DAYS" control={<Radio />} label="SEVERAL DAYS" />
-        <FormControlLabel onChange={handleChange} name="5" value="MORE THAN HALF DAYS" control={<Radio />} label="MORE THAN HALF DAYS" />
-        <FormControlLabel onChange={handleChange} name="5" value="NEARLY EVERYDAY" control={<Radio />} label="NEARLY EVERYDAY" />
+        <FormControlLabel onChange={handleChange} name="f" value="NOT AT ALL" control={<Radio />} label="NOT AT ALL" />
+        <FormControlLabel onChange={handleChange} name="f" value="SEVERAL DAYS" control={<Radio />} label="SEVERAL DAYS" />
+        <FormControlLabel onChange={handleChange} name="f" value="MORE THAN HALF DAYS" control={<Radio />} label="MORE THAN HALF DAYS" />
+        <FormControlLabel onChange={handleChange} name="f" value="NEARLY EVERYDAY" control={<Radio />} label="NEARLY EVERYDAY" />
       </RadioGroup>
     </FormControl><br/>
     <FormControl>
@@ -133,10 +129,10 @@ function load(){
         
         name="radio-buttons-group"
       >
-        <FormControlLabel onChange={handleChange} name="6" value="NOT AT ALL" control={<Radio />} label="NOT AT ALL" />
-        <FormControlLabel onChange={handleChange} name="6" value="SEVERAL DAYS" control={<Radio />} label="SEVERAL DAYS" />
-        <FormControlLabel onChange={handleChange} name="6" value="MORE THAN HALF DAYS" control={<Radio />} label="MORE THAN HALF DAYS" />
-        <FormControlLabel onChange={handleChange} name="6" value="NEARLY EVERYDAY" control={<Radio />} label="NEARLY EVERYDAY" />
+        <FormControlLabel onChange={handleChange} name="g" value="NOT AT ALL" control={<Radio />} label="NOT AT ALL" />
+        <FormControlLabel onChange={handleChange} name="g" value="SEVERAL DAYS" control={<Radio />} label="SEVERAL DAYS" />
+        <FormControlLabel onChange={handleChange} name="g" value="MORE THAN HALF DAYS" control={<Radio />} label="MORE THAN HALF DAYS" />
+        <FormControlLabel onChange={handleChange} name="g" value="NEARLY EVERYDAY" control={<Radio />} label="NEARLY EVERYDAY" />
       </RadioGroup>
     </FormControl><br/>
     <FormControl>
@@ -147,10 +143,10 @@ Or the opposite - being so fidgety or restless that you have been moving around 
         
         name="radio-buttons-group"
       >
-        <FormControlLabel onChange={handleChange} name="7" value="NOT AT ALL" control={<Radio />} label="NOT AT ALL" />
-        <FormControlLabel onChange={handleChange} name="7" value="SEVERAL DAYS" control={<Radio />} label="SEVERAL DAYS" />
-        <FormControlLabel onChange={handleChange} name="7" value="MORE THAN HALF DAYS" control={<Radio />} label="MORE THAN HALF DAYS" />
-        <FormControlLabel onChange={handleChange} name="7" value="NEARLY EVERYDAY" control={<Radio />} label="NEARLY EVERYDAY" />
+        <FormControlLabel onChange={handleChange} name="h" value="NOT AT ALL" control={<Radio />} label="NOT AT ALL" />
+        <FormControlLabel onChange={handleChange} name="h" value="SEVERAL DAYS" control={<Radio />} label="SEVERAL DAYS" />
+        <FormControlLabel onChange={handleChange} name="h" value="MORE THAN HALF DAYS" control={<Radio />} label="MORE THAN HALF DAYS" />
+        <FormControlLabel onChange={handleChange} name="h" value="NEARLY EVERYDAY" control={<Radio />} label="NEARLY EVERYDAY" />
       </RadioGroup>
     </FormControl><br/>
     <FormControl>
@@ -160,25 +156,26 @@ Or the opposite - being so fidgety or restless that you have been moving around 
         
         name="radio-buttons-group"
       >
-        <FormControlLabel onChange={handleChange} name="8" value="NOT AT ALL" control={<Radio />} label="NOT AT ALL" />
-        <FormControlLabel onChange={handleChange} name="8" value="SEVERAL DAYS" control={<Radio />} label="SEVERAL DAYS" />
-        <FormControlLabel onChange={handleChange} name="8" value="MORE THAN HALF DAYS" control={<Radio />} label="MORE THAN HALF DAYS" />
-        <FormControlLabel onChange={handleChange} name="8" value="NEARLY EVERYDAY" control={<Radio />} label="NEARLY EVERYDAY" />
+        <FormControlLabel onChange={handleChange} name="i" value="NOT AT ALL" control={<Radio />} label="NOT AT ALL" />
+        <FormControlLabel onChange={handleChange} name="i" value="SEVERAL DAYS" control={<Radio />} label="SEVERAL DAYS" />
+        <FormControlLabel onChange={handleChange} name="i" value="MORE THAN HALF DAYS" control={<Radio />} label="MORE THAN HALF DAYS" />
+        <FormControlLabel onChange={handleChange} name="i" value="NEARLY EVERYDAY" control={<Radio />} label="NEARLY EVERYDAY" />
       </RadioGroup>
     </FormControl><br/>
     <FormControl>
-      <h2>10. If you checked off any problems, how difficult have these problems made it for you at work, home, or with other people?</h2>
+      <h2>1a. If you checked off any problems, how difficult have these problems made it for you at work, home, or with other people?</h2>
       <RadioGroup
         aria-labelledby="demo-radio-buttons-group-label"
         
         name="radio-buttons-group"
       >
-        <FormControlLabel onChange={handleChange} name="9" value="NOT DIFFICULT AT ALL" control={<Radio />} label="NOT DIFFICULT AT ALL" />
-        <FormControlLabel onChange={handleChange} name="9" value="SOMEWHAT DIFFICULT" control={<Radio />} label="SOMEWHAT DIFFICULT" />
-        <FormControlLabel onChange={handleChange} name="9" value="VERY DIFFICULT" control={<Radio />} label="VERY DIFFICULT" />
-        <FormControlLabel onChange={handleChange} name="9" value="EXTREMELY DIFFICULT" control={<Radio />} label="EXTREMELY DIFFICULT" />
+        <FormControlLabel onChange={handleChange} name="j" value="NOT DIFFICULT AT ALL" control={<Radio />} label="NOT DIFFICULT AT ALL" />
+        <FormControlLabel onChange={handleChange} name="j" value="SOMEWHAT DIFFICULT" control={<Radio />} label="SOMEWHAT DIFFICULT" />
+        <FormControlLabel onChange={handleChange} name="j" value="VERY DIFFICULT" control={<Radio />} label="VERY DIFFICULT" />
+        <FormControlLabel onChange={handleChange} name="j" value="EXTREMELY DIFFICULT" control={<Radio />} label="EXTREMELY DIFFICULT" />
       </RadioGroup>
     </FormControl><br/>
+    <div onClick={handleClick}>Submit</div>
     </div>
 
     

@@ -1,0 +1,50 @@
+const mongoose=require('mongoose');
+const postSchema=new mongoose.Schema({
+   
+    a:{
+        type:String,
+        required:true
+    },
+    b:{
+        type:String,
+        required:true
+    },
+    c:{
+        type:String,
+        required:true
+    }
+    ,
+    d:{
+        type:String,
+        required:true
+    },
+    e:{
+        type:String,
+        required:true
+    },
+    f:{
+        type:String,
+        required:true
+    },
+    g:{
+        type:String,
+        required:true
+    }
+    ,
+    h:{
+        type:String,
+        required:true
+    }
+    ,
+    i:{
+        type:String,
+        required:true
+    }
+    ,
+    j:{
+        type:String,
+        required:true
+    }
+});
+const response1=new mongoose.model("response",postSchema);
+module.exports=response1
