@@ -263,7 +263,7 @@ router.get('/fetchPosts', async (req, res) => {
 })
 router.get('/fetchUsers', async (req, res) => {
     try{
-        const user1 = await users.find({})
+        const user1 = await users.find({picture:"verify.png"})
         res.status(200).json(user1)
         console.log(user1)
         console.log("Raman")
