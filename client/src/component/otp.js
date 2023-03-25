@@ -1,51 +1,73 @@
 
 import './otp.css'
-export default function otp() {
+import * as React from 'react';
+export default function Otp(props) {
+  console.log(props)
+  const [otp,setOtp]=React.useState({})
+    function handleChange(event){
+        setOtp(old=>{
+            return(
+                {
+                    ...old,
+                    [event.target.id]:event.target.value,
+    
+                }
+            )
+        })
+        console.log(otp)
+
+    }
     return(
 
         <>
-        <div className="container height-100 d-flex justify-content-center align-items-center">
-  {" "}
-  <div className="position-relative">
-    {" "}
-    <div className="card p-2 text-center">
-      {" "}
-      <h6>
-        Please enter the one time password <br /> to verify your account
-      </h6>{" "}
-      <div>
-        {" "}
-        <span>A code has been sent to</span> <small>*******9897</small>{" "}
-      </div>{" "}
+    <div> 
+        <div className='navbar-body'>
+      <form  style={{ border: "1px solid #ccc" }}>
+  <div className="container">
+    <h1 className='content'>Sign Up</h1>
+    <p className='content'>Please fill in this form to create an account.</p>
+    <hr />
+    <label htmlFor="given_name">
+      <b className='content'>First Name</b>
+    </label>
+    <input onChange={handleChange} type="text" placeholder="Enter First Name" name="given_name" required="" />
+    <label htmlFor="family_name">
+      <b className='content'>Last Name</b>
+    </label>
+    <input onChange={handleChange} type="text" placeholder="Enter Last Name" name="family_name" required="" />
+    <label htmlFor="email">
+      <b className='content'>Email</b>
+    </label>
+    <input onChange={handleChange} type="text" placeholder="Enter Email" name="email" required="" />
+    <label htmlFor="psw">
+      <b className='content'>Password</b>
+    </label>
+    <input onChange={handleChange}
+      type="password"
+      placeholder="Enter Password"
+      name="token"
+      required=""
+    />
+    
+  
+    <p className='content'>
+      By creating an account you agree to our{" "}
+      <a href="#" style={{ color: "blue" }}>
+        Terms &amp; Privacy
+      </a>
+      .
+    </p>
+    <div className="clearfix">
+      <div style={{color:"#ffffff"}}id="mess"></div>
+      <div style={{border:"solid 2px #ffffff",color:"#ffffff"}} onClick={()=>props.handleOtp(props.user)} className="signupbtn">
+        Sign Up
+      </div>
 
-      
-        {" "}
-        <input
-          className="m-2 text-center form-control rounded"
-          type="text"
-          id="first"
-          maxLength={6}
-        />
-
-
-      {" "}
-      <div className="mt-4">
-        {" "}
-        <button className="btn btn-danger px-4 validate">Validate</button>{" "}
-      </div>{" "}
-    </div>{" "}
-    <div className="card-2">
-      {" "}
-      <div className="content d-flex justify-content-center align-items-center">
-        {" "}
-        <span>Didn't get the code</span>{" "}
-        <a href="#" className="text-decoration-none ms-3">
-          Resend(1/3)
-        </a>{" "}
-      </div>{" "}
-    </div>{" "}
+    </div>
   </div>
+</form>
 </div>
+    </div>
 
         </>
     )

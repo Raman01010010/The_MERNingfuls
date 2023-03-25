@@ -1,7 +1,7 @@
 import React from 'react'
 import "../App.css"
 import { addUser } from '../services/api'
-export default function Signup() {
+export default function Signup(props) {
   const [user,setUser]=React.useState({})
   function handleChange(event){
     console.log("changed")
@@ -67,9 +67,11 @@ export default function Signup() {
       .
     </p>
     <div className="clearfix">
-      <button type="submit" onClick={handleSubmit} className="signupbtn">
+      <div style={{color:"#ffffff"}}id="mess"></div>
+      <div style={{border:"solid 2px #ffffff",color:"#ffffff"}} onClick={()=>props.handleSu(user)} className="signupbtn">
         Sign Up
-      </button>
+      </div>
+
     </div>
   </div>
 </form>

@@ -11,3 +11,12 @@ export const addUser=async (data)=>{
         return error
     }
 }
+export const addUser2=async (data)=>{
+    try{
+        return await axios.post(`${URL}/cOtp`,data)
+
+    }catch(error){
+        console.log("Error add",error.response.data)
+        return error
+    }
+}
