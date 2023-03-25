@@ -109,11 +109,10 @@ async function handleSearchPost(){
     <div id="load"></div>
       <div className="row">
      
-         <h1>Share your feelings</h1>
                     <div className="col-md-7 col-xl-4 grid-margin stretch-card">
-           <div className="card">
+           <div className="card" style={{borderRadius:"100px",border:"10px solid white"}}>
              <div className="card-body">
-           
+             <h1>Share your feelings</h1>
                <h4 className="card-title"> <label>Heading of The Post</label>
                     <input onChange={handleChange}
           id="head" type="text" class="form-control p_input"></input></h4>
@@ -150,7 +149,7 @@ async function handleSearchPost(){
            </div>
          </div>
          <div className="col-md-6 col-xl-4 grid-margin stretch-card">
-           <div className="card">
+           <div className="card" style={{borderRadius:"100px",border:"10px solid white"}}>
              <div className="card-body">
            
                <h4 className="card-title"> <label>Enter keywords to search</label>
@@ -192,7 +191,7 @@ async function handleSearchPost(){
   return(
     <>     
       <div className="col-md-6 col-xl-4 grid-margin stretch-card">
-        <div className="card">
+        <div className="card" style={{backgroundColor:"#376931",border:"10px solid #b055b5",borderRadius:"40px"}}>
           <div className="card-body">
             <h4 className="card-title">{item.head}</h4>
             <div
@@ -233,14 +232,14 @@ async function handleSearchPost(){
           </div>
           <div className="flex items-center flex-wrap ">
                     <a className="text-indigo-500 inline-flex items-center md:mb-2 lg:mb-0" id={item._id} onClick={()=>props.see(item)}>See More
-                      <svg className="w-4 h-4 ml-2" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2} fill="none" strokeLinecap="round" strokeLinejoin="round">
+                      <svg className="w-4 h-4 ml-2" style={{width:"20px"}} viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2} fill="none" strokeLinecap="round" strokeLinejoin="round">
                         <path d="M5 12h14" />
                         <path d="M12 5l7 7-7 7" />
                       </svg>
                     </a>
                    
                     <span onClick={()=>props.see(item)}className="text-gray-400 inline-flex items-center leading-none text-sm">
-                      <svg className="w-8 h-8 mr-1" stroke="currentColor" strokeWidth={2} fill="none" strokeLinecap="round" strokeLinejoin="round" viewBox="0 0 24 24">
+                      <svg className="w-8 h-8 mr-1" stroke="currentColor" strokeWidth={2} fill="none" strokeLinecap="round" strokeLinejoin="round" viewBox="0 0 24 24" style={{width:"20px"}}>
                         <path d="M21 11.5a8.38 8.38 0 01-.9 3.8 8.5 8.5 0 01-7.6 4.7 8.38 8.38 0 01-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 01-.9-3.8 8.5 8.5 0 014.7-7.6 8.38 8.38 0 013.8-.9h.5a8.48 8.48 0 018 8v.5z" />
                       </svg>{item.comments.length} comments
                       
