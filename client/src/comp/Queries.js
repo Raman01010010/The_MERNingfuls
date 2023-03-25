@@ -42,7 +42,7 @@ function load(){
 }
 
     return(<>
-    <>
+    
     <div  style={{background:"#669aed"}}>
   
       <div style={{fontSize:"40px",marginLeft:"0px"}}>1. Little interest or pleasure in doing things</div>
@@ -161,7 +161,7 @@ Or the opposite - being so fidgety or restless that you have been moving around 
         <FormControlLabel onChange={handleChange} name="i" value="MORE THAN HALF DAYS" control={<Radio />} label="MORE THAN HALF DAYS" />
         <FormControlLabel onChange={handleChange} name="i" value="NEARLY EVERYDAY" control={<Radio />} label="NEARLY EVERYDAY" />
       </RadioGroup>
-    </FormControl><br/>
+    <br/>
     <FormControl>
       <h2>1a. If you checked off any problems, how difficult have these problems made it for you at work, home, or with other people?</h2>
       <RadioGroup
@@ -176,9 +176,9 @@ Or the opposite - being so fidgety or restless that you have been moving around 
       </RadioGroup>
     </FormControl><br/>
     <div onClick={handleClick}>Submit</div>
-    </div>
+    
 
     
-</>
+</div>
 </> )
 }
