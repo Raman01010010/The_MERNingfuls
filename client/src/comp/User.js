@@ -88,7 +88,7 @@ console.log(search)
     }
   return(<>
   
-      <div style={{background:"#ffffff",marginBottom:"10px",borderRadius:"10px"}}>
+      <div style={{backgroundColor:"#9cd468",marginBottom:"10px",borderRadius:"10px"}}>
         <br/>
   <TextField
         onChange={handleChange}
@@ -104,7 +104,7 @@ console.log(search)
         <Stack direction="row" spacing={2}>
           <br/>
       
-      <Button color="success" style={{marginLeft:"40%"}} onClick={handleSearch} variant="contained" endIcon={<SendIcon />}>
+      <Button color="success" style={{marginLeft:"40%",marginBottom:"15px",marginLeft:"45%"}} onClick={handleSearch} variant="contained" endIcon={<SendIcon />}>
         Search
       </Button>
     </Stack>
@@ -124,7 +124,7 @@ console.log(search)
                     }
                     return(<>
          <div className="col-md-6 col-xl-4 grid-margin stretch-card">
-           <div className="card">
+           <div className="card" style={{backgroundColor:"#ebbb6a",border:"9px solid #8787e8",borderRadius:"40px"}}>
              <div className="card-body">
            
                <h4 className="card-title">{item.name}</h4>
