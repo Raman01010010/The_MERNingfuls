@@ -144,7 +144,7 @@ console.log(search)
                       <img
                         src={t}
                        
-                        alt=""
+                        alt="-"
                         style={{height:"100px"}}
                       />
                     </div>
