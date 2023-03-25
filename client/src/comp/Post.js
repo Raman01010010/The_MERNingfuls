@@ -41,8 +41,8 @@
    
         <div className="col-md-6 col-xl-4 grid-margin stretch-card">
           
-          <div className="card">
-            <div className="card-body">
+          <div className="card" >
+            <div className="card-body"style={{backgroundColor:"#376931",border:"10px solid #b055b5",borderRadius:"40px"}}>
               <h4 className="card-title">{props.data.head}</h4>
               <div
                 className="owl-carousel owl-theme full-width owl-carousel-dash portfolio-carousel"
@@ -89,21 +89,7 @@
            <div style={{marginBottom:"5%"}}>{props.data.likes.length}  Likes</div>  </div>
           </div>
         </div>
-        <div className="col-md-12 col-xl-4 grid-margin stretch-card">
-          <div className="card">
-            <div className="card-body">
-            <div  class="blockquote blockquote-primary">
-              <h4 className="card-title">Share anywher with Instant QR Code</h4>
-              <QRCode
-    size={256}
-    style={{ marginLeft:"10%",border:"solid 2px green",align:"center",height: "80%", maxWidth: "80%", width: "80%" }}
-    value={`Head:${props.data.head.substring(0,20)}Body:${props.data.body.substring(0,200)}`}
-    viewBox={`0 0 256 256`}
-
-    />
-            </div>
-         </div> </div>
-        </div>
+     
       </div>
       
       
@@ -116,7 +102,7 @@
       
            <div className="col-md-6 col-xl-4 grid-margin stretch-card">
              
-             <div className="card">
+             <div className="card" style={{backgroundColor:"#376931",border:"10px solid #b055b5",borderRadius:"40px"}}>
                <div className="card-body">
                  <h4 className="card-title">{w.head}</h4>
                  <div
