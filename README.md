@@ -1,4 +1,4 @@
-<h1>The_MERNingfuls</h1>
+<h1> The_MERNingfuls </h1>
 
 <h2>
 Team Members
