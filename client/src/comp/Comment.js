@@ -32,9 +32,10 @@ export default function Comment(props){
   console.log(props)
   return(<>   <div className="col-md-6 col-xl-4 grid-margin stretch-card">
  
-  <div className="card">
+  <div className="card" style={{border:"10px solid "}}>
+    <h1 style={{color:"#a38627",marginTop:"10px"}}>Comment Section</h1>
     <div className="card-body">
-      <div style={{marginBottom:"5%"}}className="d-flex flex-row justify-content-between">
+      <div style={{marginBottom:"5%",border:"10px solid #5c291e",borderRadius:"10px"}}className="d-flex flex-row justify-content-between">
         
       <Box
       component="form"
@@ -57,8 +58,8 @@ export default function Comment(props){
     return(
       <>
       
-        <div  class="blockquote blockquote-primary">
-        <div className="preview-item border-bottom">
+        <div class="blockquote blockquote-primary" >
+        <div className="preview-item border-bottom" >
           <div className="preview-thumbnail">
             <img
               src="user.png"
@@ -67,7 +68,7 @@ export default function Comment(props){
             />
           </div>
           <div className="preview-item-content d-flex flex-grow">
-            <div className="flex-grow">
+            <div className="flex-grow" >
               <div className="d-flex d-md-block d-xl-flex justify-content-between">
                 <h6 className="preview-subject">{item.user}</h6>
                 <p className="text-muted text-small">{item.time}</p>
