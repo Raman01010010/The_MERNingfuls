@@ -164,21 +164,7 @@
               <div style={{marginBottom:"5%"}}>{w.likes.length}  Likes</div>  </div>
              </div>
            </div>
-           <div className="col-md-12 col-xl-4 grid-margin stretch-card">
-             <div className="card">
-               <div className="card-body">
-               <div  class="blockquote blockquote-primary">
-                 <h4 className="card-title">Share anywher with Instant QR Code</h4>
-                 <QRCode
-       size={256}
-       style={{ marginLeft:"10%",border:"solid 2px green",align:"center",height: "80%", maxWidth: "80%", width: "80%" }}
-       value={`Head:${w.head.substring(0,20)}Body:${w.body.substring(0,200)}`}
-       viewBox={`0 0 256 256`}
-   
-       />
-               </div>
-            </div> </div>
-           </div>
+         
          </div>
 
       }

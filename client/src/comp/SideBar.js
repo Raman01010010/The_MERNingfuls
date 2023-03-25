@@ -33,6 +33,7 @@ import Load from './Load';
 import Post from './Post'
 import About from './About'
 import { useNavigate } from "react-router-dom";
+import Queries from './Queries'
 const drawerWidth = 240;
 
 
@@ -203,6 +204,20 @@ export default function SideBar(props) {
     
   
   }
+  function handleAs(event){
+  console.log("Raman")
+    const root = ReactDOM.createRoot(
+      document.getElementById('main')
+    );
+    
+    root.render(
+      <>
+      <Queries/>
+      </>
+    );
+    
+  
+  }
   async function handleLike(event){
    // await addLike({"id":event,"user":props.props.email})
     
@@ -264,7 +279,15 @@ export default function SideBar(props) {
           <span className="menu-icon">
             <i className="mdi mdi-playlist-play" />
           </span>
-          <span className="menu-title">Queries</span>
+          <span className="menu-title">Express yourself to everyone</span>
+        </a>
+      </li>
+      <li onClick={handleAs} className="nav-item menu-items">
+        <a className="nav-link" >
+          <span className="menu-icon">
+            <i className="mdi mdi-playlist-play" />
+          </span>
+          <span className="menu-title">Take a Quick Assesment</span>
         </a>
       </li>
       <li onClick={Friends} className="nav-item menu-items">
