@@ -73,7 +73,7 @@
                     <div className="preview-item-content d-flex flex-grow">
                       <div className="flex-grow">
                         <div className="d-flex d-md-block d-xl-flex justify-content-between">
-                          <h6 className="preview-subject">{props.data.user.substring(0,props.data.user.indexOf('@'))}</h6>
+                          <h6 className="preview-subject">Anonymous</h6>
                           <p className="text-muted text-small">{props.data.time}</p>
                         </div>
                       
@@ -134,7 +134,7 @@
                        <div className="preview-item-content d-flex flex-grow">
                          <div className="flex-grow">
                            <div className="d-flex d-md-block d-xl-flex justify-content-between">
-                             <h6 className="preview-subject">{w.user.substring(0,w.user.indexOf('@'))}</h6>
+                             <h6 className="preview-subject">Anonymous</h6>
                              <p className="text-muted text-small">{props.data.time}</p>
                            </div>
                          

@@ -70,7 +70,7 @@ export default function Comment(props){
           <div className="preview-item-content d-flex flex-grow">
             <div className="flex-grow" >
               <div className="d-flex d-md-block d-xl-flex justify-content-between">
-                <h6 className="preview-subject">{item.user}</h6>
+                <h6 className="preview-subject">Anonymous</h6>
                 <p className="text-muted text-small">{item.time}</p>
               </div>
               <p className="text-muted">

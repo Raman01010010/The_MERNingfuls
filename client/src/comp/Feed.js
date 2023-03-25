@@ -20,7 +20,7 @@ export default function Feed(props){
   console.log(props)
   var i=0;
   const d=new Date().toLocaleString()
-  const [post,setPost]=React.useState({"time":d,"user":props.props.email,likes:[],comments:[]})
+  const [post,setPost]=React.useState({"time":d,"user":"anonymous",likes:[],comments:[]})
   console.log(props)
   function handleChange(event){
     
@@ -216,7 +216,7 @@ async function handleSearchPost(){
                   <div className="preview-item-content d-flex flex-grow">
                     <div className="flex-grow">
                       <div className="d-flex d-md-block d-xl-flex justify-content-between">
-                        <h6 style={{color:"green"}}className="preview-subject">{item.user.substring(0,item.user.indexOf('@'))}</h6>
+                        <h6 style={{color:"green"}}className="preview-subject">Anonymous</h6>
                         <p className="text-muted text-small">{item.time}</p>
                       </div>
                       <p className="text-muted">
