@@ -34,7 +34,7 @@ import QRCode from "react-qr-code";
 
 
 //const socket=io.connect("chatrmn.eu-4.evennode.com")
-//const socket=io.connect("http://localhost:8003")
+const socket=io.connect("http://localhost:8003")
 
 function App() {
   const navigate = useNavigate();
@@ -397,7 +397,7 @@ console.log(Img)
  }
  
   return (
-    <div className="App"  style={{background:"#ffffff"}}>
+    <div style={{background:"#000000"}}className="App">
  <div id="home">
 
   
