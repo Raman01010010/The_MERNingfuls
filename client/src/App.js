@@ -397,7 +397,7 @@ console.log(Img)
  }
  
   return (
-    <div style={{background:"#e8b7e8"}}className="App">
+    <div style={{background:"black"}}className="App">
  <div id="home">
 
   

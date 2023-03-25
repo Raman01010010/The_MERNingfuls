@@ -191,7 +191,7 @@ async function handleSearchPost(){
   return(
     <>     
       <div className="col-md-6 col-xl-4 grid-margin stretch-card">
-        <div className="card" style={{backgroundColor:"#376931",border:"10px solid #b055b5",borderRadius:"40px"}}>
+        <div className="card" style={{backgroundColor:"#edc2ed",border:"10px solid #f06c84",borderRadius:"40px"}}>
           <div className="card-body">
             <h4 className="card-title">{item.head}</h4>
             <div
@@ -230,7 +230,7 @@ async function handleSearchPost(){
             <p className="text-muted"> {item.body} </p>
             
           </div>
-          <div className="flex items-center flex-wrap ">
+          <div className="flex items-center flex-wrap" style={{color:"black"}}>
                     <a className="text-indigo-500 inline-flex items-center md:mb-2 lg:mb-0" id={item._id} onClick={()=>props.see(item)}>See More
                       <svg className="w-4 h-4 ml-2" style={{width:"20px"}} viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2} fill="none" strokeLinecap="round" strokeLinejoin="round">
                         <path d="M5 12h14" />
