@@ -145,14 +145,14 @@ console.log(search)
                         src={t}
                        
                         alt=""
-                        style={{height:"50%"}}
+                        style={{height:"100px"}}
                       />
                     </div>
                    <div className="preview-item p-0">
                      
                      <div className="preview-item-content d flex-grow">
-                     <button id={item.email} onClick={handleMessage} className="flex mx-auto mt-6 text-white bg-indigo-500 border-0 py-2 px-5 focus:outline-none hover:bg-indigo-600 rounded">Message</button><br/>
-                     <button style={{width:"50%"}} onClick={()=>handleProfile(item)}  className="flex mx-auto mt-6 text-white bg-indigo-500 border-0 py-2 px-5 focus:outline-none hover:bg-indigo-600 rounded">View Profile</button>
+                     <button style={{background:"#000080"}}id={item.email} onClick={handleMessage} className=" my-3  flex mx-auto mt-6 text-white bg-indigo-500 border-0 py-2 px-5 focus:outline-none hover:bg-indigo-600 rounded">Message</button><br/>
+                     <button  style={{background:"#000080"}} onClick={()=>handleProfile(item)}  className="flex mx-auto mt-6 text-white bg-indigo-500 border-0 py-2 px-5 focus:outline-none hover:bg-indigo-600 rounded">View Profile</button>
         
                      </div>
                    </div>
