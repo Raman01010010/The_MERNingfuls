@@ -17,33 +17,25 @@
 }
 */
 const mongoose=require('mongoose');
-const userSchema=new mongoose.Schema({
-    token:{
+const postSchema=new mongoose.Schema({
+   
+    content:{
         type:String,
         required:true
     },
-    given_name:{
-        type:String,
-        required:true
-    },
-    family_name:{
-        type:String,
-        required:true
-    },
-
-    name:{
-        type:String,
-        required:true
-    },
-    email:{
+    from:{
         type:String,
         required:true,
-        unique:true
+       
     },
-    picture:{
+    to:{
+        type:String,
+        required:true
+    },
+    time:{
         type:String,
         required:true
     }
 });
-const users=new mongoose.model("Channel",userSchema);
-module.exports=users
+const message=new mongoose.model("message",postSchema);
+module.exports=message
