@@ -228,16 +228,16 @@ Or the opposite - being so fidgety or restless that you have been moving around 
       </RadioGroup>
     </FormControl><br/>
     <FormControl>
-      <h2>2.2. Feeling down, depressed, or hopeless</h2>
+      <h2>10. If you checked off any problems, how difficult have these problems made it for you at work, home, or with other people?</h2>
       <RadioGroup
         aria-labelledby="demo-radio-buttons-group-label"
         
         name="radio-buttons-group"
       >
-        <FormControlLabel onChange={handleChange} name="9" value="NOT AT ALL" control={<Radio />} label="NOT AT ALL" />
-        <FormControlLabel onChange={handleChange} name="9" value="SEVERAL DAYS" control={<Radio />} label="SEVERAL DAYS" />
-        <FormControlLabel onChange={handleChange} name="9" value="MORE THAN HALF DAYS" control={<Radio />} label="MORE THAN HALF DAYS" />
-        <FormControlLabel onChange={handleChange} name="9" value="NEARLY EVERYDAY" control={<Radio />} label="NEARLY EVERYDAY" />
+        <FormControlLabel onChange={handleChange} name="9" value="NOT DIFFICULT AT ALL" control={<Radio />} label="NOT DIFFICULT AT ALL" />
+        <FormControlLabel onChange={handleChange} name="9" value="SOMEWHAT DIFFICULT" control={<Radio />} label="SOMEWHAT DIFFICULT" />
+        <FormControlLabel onChange={handleChange} name="9" value="VERY DIFFICULT" control={<Radio />} label="VERY DIFFICULT" />
+        <FormControlLabel onChange={handleChange} name="9" value="EXTREMELY DIFFICULT" control={<Radio />} label="EXTREMELY DIFFICULT" />
       </RadioGroup>
     </FormControl><br/>
     </div>
