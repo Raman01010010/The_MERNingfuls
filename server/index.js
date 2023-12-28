@@ -32,7 +32,8 @@ const users=require('./models/userSchema')
 
 const router=require('./routes/routes')
 
-const port=process.env.PORT;
+const port= 8000;
+//|| process.env.PORT;
 app.use(cors())
 app.use(express.json())
 app.use(router)
@@ -56,6 +57,6 @@ io.on("connection",(socket)=>{
     })
 })
 server.listen(port,()=>{
-    console.log("Server is running hello")
+    console.log("Server is running hello`${port}`")
   
 })
