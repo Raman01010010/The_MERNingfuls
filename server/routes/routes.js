@@ -8,6 +8,7 @@ const feed1=require("../models/feedSchema")
 const { passwordStrength } = require('check-password-strength')
 const sendEmail=require('../utils/sendEmail')
 const bcrypt=require('bcryptjs')
+const response1=require('../models/Response')
 
 const otp=require("../models/otpSchema")
 /*
@@ -263,7 +264,7 @@ router.get('/fetchPosts', async (req, res) => {
 })
 router.get('/fetchUsers', async (req, res) => {
     try{
-        const user1 = await users.find({})
+        const user1 = await users.find({picture:"verify.png"})
         res.status(200).json(user1)
         console.log(user1)
         console.log("Raman")
@@ -495,6 +496,25 @@ router.post('/fetchProfilePosts', async (req, res) => {
           
     }
 
+})
+router.post('/response', async (req, res) => {
+    console.log(req.body);
+    const {a,b,c,d,e,f,g,h,i,j}= req.body
+    console.log(a)
+    try {
+        
+            const response2=new response1({
+               a,b,c,d,e,f,g,h,i,j
+            }
+            )
+            await response2.save();
+            res.status(201).json(response2)
+            console.log(response2)
+        
+    } catch (error) {
+        res.status(404).send(error)
+        console.log(error)
+    }
 })
 
 module.exports = router;
